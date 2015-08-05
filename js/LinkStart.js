@@ -8,6 +8,7 @@ $().ready(function () {
 //	},500);
 
 	$('#link_start_btn').click(function () {
+		ddtime=500;
 		isreset=false;
 			$('#link_start').removeClass('link_starting')
 	setTimeout(function () {
@@ -23,7 +24,7 @@ $().ready(function () {
 		
 	},1500);
 			
-	})
+	});
 	
 	$('#link_start').removeClass('link_start')
 	setTimeout(function () {
