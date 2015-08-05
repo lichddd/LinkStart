@@ -1,13 +1,39 @@
 $().ready(function () {
 
+//	setTimeout(function () {
+//		
+//		timer();
+//		
+//		
+//	},500);
+
+	$('#link_start_btn').click(function () {
+		isreset=false;
+			$('#link_start').removeClass('link_starting')
+	setTimeout(function () {
+		
+		$('#link_start').addClass('link_start');
+		
+		
+	},5);
 	setTimeout(function () {
 		
 		timer();
 		
 		
-	},500);
-
-
+	},1500);
+			
+	})
+	
+	$('#link_start').removeClass('link_start')
+	setTimeout(function () {
+		
+		$('#link_start').addClass('link_starting');
+		
+		
+	},5);
+	
+	
 	
 
 	
@@ -103,8 +129,16 @@ var csslist=[
 ];
 
 
-var ddtime=100;
+var ddtime=500;
+var isreset=false;
 function timer () {
+	if (isreset) {
+			return;
+		}
+	if (ddtime<=20) {
+		reset();
+		return;
+	}
 	var tempdiv= $('<div class="link_bar"></div>').appendTo('#main');
 //	console.log(csslist);
 //	console.log(count+"   "+(count%8));
@@ -121,16 +155,48 @@ function timer () {
 	tempdiv.css('transform',tempobj.transform);
 	tempdiv.data('reT',tempobj);
 	setTimeout(function () {
+		if (isreset) {
+			return;
+		}
 		tempdiv.css('transform',tempdiv.data('reT').retransform);
-	ddtime--;
+	ddtime-=5;
 	},100);
 	
 	setTimeout(function () {
-		
+		if (isreset) {
+			return;
+		}
 		tempdiv.remove();
 		
 		
 	},5500);
+	
 	setTimeout(timer,ddtime);
+}
+function reset () {
+		isreset=true;
+		$('#main div').each(function() {
+			$(this).css('transition','all 1s cubic-bezier(0.66,0.27,1,0.53) 0s');
+			$(this).css('transform',$(this).data('reT').transform);
+			var tttt=$(this);
+			setTimeout(function () {
+				tttt.remove();
+			},1100);
+			
+			
+		});
+setTimeout(function () {
+
+				
+				
+
+		$('#link_start').removeClass('link_start');
+			setTimeout(function () {
+				
+				$('#link_start').addClass('link_starting');
+				
+				
+			},5);
+			},800);
 }
 
