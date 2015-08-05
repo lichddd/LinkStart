@@ -170,7 +170,7 @@ function timer () {
 		tempdiv.remove();
 		
 		
-	},5500);
+	},2200);
 	
 	setTimeout(timer,ddtime);
 }
