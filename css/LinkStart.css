@@ -1,0 +1,47 @@
+body {
+	background-color: #eeeeee;
+	margin: 0px;
+	
+}
+.continer
+{
+width: 100%;
+  height: 100%;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  transform-style: preserve-3d;
+  perspective: 50px;
+  overflow: hidden;
+}
+#main
+{
+  width: 100%;  
+  height: 100%;  
+  transform-style: preserve-3d;
+  /*transform: translateZ(0px);*/
+  margin: auto;  
+  position: absolute;  
+  top: 0; left: 0; bottom: 0; right: 0;  
+
+}
+.link_bar
+{
+border-radius: 25px;
+width: 300px;
+height: 50px;
+	background-color:  #00B7FF;
+	transform-origin: 0px 25px;
+	position: absolute;
+	transition:all 5s cubic-bezier(0.66,0.27,1,0.53) 0s;
+    
+-moz-transition:all 5s cubic-bezier(0.66,0.27,1,0.53) 0s;
+
+-webkit-transition:all 5s cubic-bezier(0.66,0.27,1,0.53) 0s;
+
+-o-transition-duration:all 5s cubic-bezier(0.66,0.27,1,0.53) 0s;
+
+}
