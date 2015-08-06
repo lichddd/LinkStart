@@ -140,7 +140,7 @@ function timer () {
 		reset();
 		return;
 	}
-	var tempdiv= $('<div class="link_bar"></div>').appendTo('#main');
+	var tempdiv= $('<div class="link_bar"><p>High强xx笑哈哈</p></div>').appendTo('#main');
 //	console.log(csslist);
 //	console.log(count+"   "+(count%8));
 //	Math.ceil(Math.random()*colorlist.length)
@@ -170,7 +170,7 @@ function timer () {
 		tempdiv.remove();
 		
 		
-	},2200);
+	},5200);
 	
 	setTimeout(timer,ddtime);
 }

@@ -158,12 +158,24 @@ height: 50px;
 	background-color:  #00B7FF;
 	transform-origin: 0px 25px;
 	position: absolute;
-	transition:all 2s cubic-bezier(0.66,0.27,1,0.53) 0s;
+	transition:all 5s cubic-bezier(0.66,0.27,1,0.53) 0s;
     
--moz-transition:all 2s cubic-bezier(0.66,0.27,1,0.53) 0s;
+-moz-transition:all 5s cubic-bezier(0.66,0.27,1,0.53) 0s;
 
--webkit-transition:all 2s cubic-bezier(0.66,0.27,1,0.53) 0s;
+-webkit-transition:all 5s cubic-bezier(0.66,0.27,1,0.53) 0s;
 
--o-transition-duration:all 2s cubic-bezier(0.66,0.27,1,0.53) 0s;
+-o-transition-duration:all 5s cubic-bezier(0.66,0.27,1,0.53) 0s;
 
+}
+.link_bar p
+{
+  color: #ffffff;
+  font-family: "微软雅黑";
+  font-size: 36px;
+  font-weight: 900;
+  text-shadow: 0px 0px 2px;
+  text-align: center;
+  margin: 0px;
+  direction:  rtl;
+  unicode-bidi: bidi-override;
 }
